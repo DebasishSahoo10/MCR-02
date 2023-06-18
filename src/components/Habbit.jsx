@@ -4,19 +4,19 @@ import { DataContext } from "../contexts/DataContext";
 
 /* eslint-disable react/prop-types */
 export const Habbit = ({ habbit }) => {
-  const {state, dispatch} = useContext(DataContext)
+  const { state, dispatch } = useContext(DataContext);
   const [isDetails, setIsDetails] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
   const handleEdit = () => {
     setIsEdit(true);
   };
   const handleDelete = () => {
-    dispatch({type : "DELETE_HABBIT", payload : habbit})
+    dispatch({ type: "DELETE_HABBIT", payload: habbit });
   };
   const handleArchive = () => {
-    dispatch({type : "DELETE_HABBIT", payload : habbit})
-    dispatch({type : "ADD_TO_ARCHIVE", payload : habbit})
-  }
+    dispatch({ type: "DELETE_HABBIT", payload: habbit });
+    dispatch({ type: "ADD_TO_ARCHIVE", payload: habbit });
+  };
   return (
     <>
       <li key={habbit.id}>
@@ -34,9 +34,13 @@ export const Habbit = ({ habbit }) => {
           <button onClick={() => setIsDetails((prev) => !prev)}>
             {isDetails ? "Hide Details" : "Show Details"}
           </button>
-          <button onClick={() => handleEdit()}>Edit</button>
-          <button onClick={() => handleDelete()}>Delete</button>
-          {!state.archive.includes(habbit) && <button onClick={()=> handleArchive()}>Archive</button>}
+          {!state.archive.includes(habbit) && (
+            <>
+              <button onClick={() => handleEdit()}>Edit</button>
+              <button onClick={() => handleDelete()}>Delete</button>
+              <button onClick={() => handleArchive()}>Archive</button>
+            </>
+          )}
         </div>
       </li>
     </>
