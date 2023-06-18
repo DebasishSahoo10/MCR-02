@@ -1,0 +1,101 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+body {
+  background-color: white;
+}
+.card {
+  padding: 2em;
+}
+h1 {
+  color: black;
+}
+.read-the-docs {
+  color: #888;
+}
+.habbit-container {
+  padding-inline-start: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.habbit-container li {
+  width: 400px;
+  height: 200px;
+  background-color: transparent;
+  border: 2px dashed lightcoral;
+  border-radius: 10px;
+  color: black;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.habbit-container button {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.habbit-container li:first-child {
+  font-weight: bold;
+}
+.habbit-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.habbit-name input {
+  max-width: 50%;
+}
+.habbit-other {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+button {
+  margin-top: 40px;
+}
+dialog::backdrop {
+  background-color: rgba(255, 255, 255, 0.949);
+}
+.details p {
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-size: small;
+}
+.button-holder {
+  display: flex;
+  gap: 10px;
+}
