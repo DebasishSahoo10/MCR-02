@@ -86,6 +86,7 @@ h1 {
 }
 button {
   margin-top: 40px;
+  border: 1px solid black;
 }
 dialog::backdrop {
   background-color: rgba(255, 255, 255, 0.949);
