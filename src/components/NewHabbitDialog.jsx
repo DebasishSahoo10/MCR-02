@@ -98,6 +98,7 @@ export const NewHabbitDialog = ({ open, addFunction }) => {
           </select>
         </div>
         <button onClick={() => handleAddClick()}>Add</button>
+        <button onClick={()=>addFunction()} style={{marginLeft : "10px"}}>Close</button>
       </dialog>
     </>
   );

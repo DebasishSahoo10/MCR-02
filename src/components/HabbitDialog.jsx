@@ -93,6 +93,7 @@ export const HabbitDialog = ({ open, closeFunc, habbit }) => {
           </select>
         </div>
         <button onClick={() => handleEditClick()}>Save</button>
+        <button onClick={()=>closeFunc(false)} style={{marginLeft : "10px"}}>Close</button>
       </dialog>
     </>
   );
